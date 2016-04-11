@@ -2,9 +2,6 @@ package net.codejava.spring.config;
 
 import javax.sql.DataSource;
 
-import net.codejava.spring.dao.ContactDAO;
-import net.codejava.spring.dao.ContactDAOImpl;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +11,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import net.codejava.spring.dao.ContactDAO;
+import net.codejava.spring.dao.ContactDAOImpl;
 
 @Configuration
 @ComponentScan(basePackages="net.codejava.spring")
