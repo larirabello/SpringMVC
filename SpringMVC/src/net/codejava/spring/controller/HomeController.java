@@ -28,6 +28,13 @@ public class HomeController {
 	private ContactDAO contactDAO;
 	
 	@RequestMapping(value="/")
+	public ModelAndView mainPage(ModelAndView model) throws IOException{
+		model.setViewName("index");
+		
+		return model;
+	}
+	
+	@RequestMapping(value="/contacts")
 	public ModelAndView listContact(ModelAndView model) throws IOException{
 		List<Contact> listContact = contactDAO.list();
 		model.addObject("listContact", listContact);
