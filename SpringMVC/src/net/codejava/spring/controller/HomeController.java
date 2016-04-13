@@ -54,14 +54,14 @@ public class HomeController {
 	@RequestMapping(value = "/saveContact", method = RequestMethod.POST)
 	public ModelAndView saveContact(@ModelAttribute Contact contact) {
 		contactDAO.saveOrUpdate(contact);		
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/contacts");
 	}
 	
 	@RequestMapping(value = "/deleteContact", method = RequestMethod.GET)
 	public ModelAndView deleteContact(HttpServletRequest request) {
 		int contactId = Integer.parseInt(request.getParameter("id"));
 		contactDAO.delete(contactId);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/contacts");
 	}
 	
 	@RequestMapping(value = "/editContact", method = RequestMethod.GET)
