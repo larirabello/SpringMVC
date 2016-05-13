@@ -255,8 +255,8 @@ td{border-width:0 1px;}
 #mainav li li:last-child a{border-radius:0 0 8px 8px;}
 #mainav li li:first-child a, #slide-wrapper figure img, #slide-wrapper figure .view:hover::before{border-radius:8px 8px 0 0;}
 
-#slider #slide-tabs li:first-child a{border-radius:0 0 0 8px;}
-#slider #slide-tabs li:last-child a{border-radius:0 0 8px 0;}
+/* #slider #slide-tabs li:first-child a{border-radius:0 0 0 8px;}
+#slider #slide-tabs li:last-child a{border-radius:0 0 8px 0;}  */
 
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -301,7 +301,7 @@ label span{color:#FF0000; background-color:inherit;}
 /* Homepage Slider */
 #slide-wrapper figure figcaption{color:#666666; background-color:rgba(255,255,255,.5);}
 #slide-wrapper figure figcaption:hover{background-color:rgba(255,255,255,1);}
-#slider #slide-tabs li a{color:#666666; background-color:#FFFFFF; border-color:#666666;}
+#slider #slide-tabs li a{color:#666666; background-color:#FFFFFF; border-color:#FFFFFF;}
 #slider #slide-tabs li a:hover, #slider #slide-tabs li.active a{color:#FFFFFF; background-color:#213E7F;}
 
 
