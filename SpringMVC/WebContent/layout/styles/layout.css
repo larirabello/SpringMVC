@@ -36,8 +36,8 @@ File: Layout CSS
 #header{}
 
 #header #logo{}
-#header #logo h1{margin:0 0 8px 0; padding:0; font-size:36px; line-height:12px; font-variant:small-caps; font-style:normal;}
-#header #logo p{margin:0; padding:0;}
+#header #logo h1{margin:30px 0 15px 10px; padding:0; font-size:36px; line-height:12px; font-variant:small-caps; font-style:normal;}
+#header #logo p{margin:10px 15px; padding:0;}
 
 #header form{display:block; position:relative; width:100%;}
 #header input, #header button{display:block; height:30px; border:none;}
@@ -268,9 +268,9 @@ td{border-width:0 1px;}
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
-body{color:#F9F9F9; background-color:#06213F;}
+body{color:#213E7F; background-color:#F9F9F9;}  /* #eee é o bege claro do website GFT */
 
-a{color:#55ABDA;}
+a{color:#0097D9;}
 
 hr, .borderedbox{border-color:#D7D7D7;}
 
@@ -280,13 +280,13 @@ label span{color:#FF0000; background-color:inherit;}
 
 
 /* Rows */
-.row0, .row0 a{color:#F9F9F9; background-color:#06213F;}
-.row1{color:#979797; background-color:#06213F;}
+.row0, .row0 a{color:#F9F9F9; background-color:#213E7F;}
+.row1{color:#979797; background-color:#213E7F;}
 .row1 a{color:#F9F9F9; background-color:inherit;}
-.row2, .row2 a{color:#06213F; background-color:inherit;}
+.row2, .row2 a{color:#213E7F; background-color:inherit;}
 .row3{color:#979797; background-color:inherit;}
 .row4{color:#979797; background-color:inherit;}
-.row5, .row5 a{color:#55ABDA; background-color:#06213F;}
+.row5, .row5 a{color:#55ABDA; background-color:#213E7F;}
 
 
 /* Top Bar */
@@ -302,7 +302,7 @@ label span{color:#FF0000; background-color:inherit;}
 #slide-wrapper figure figcaption{color:#666666; background-color:rgba(255,255,255,.5);}
 #slide-wrapper figure figcaption:hover{background-color:rgba(255,255,255,1);}
 #slider #slide-tabs li a{color:#666666; background-color:#FFFFFF; border-color:#666666;}
-#slider #slide-tabs li a:hover, #slider #slide-tabs li.active a{color:#FFFFFF; background-color:#06213F;}
+#slider #slide-tabs li a:hover, #slider #slide-tabs li.active a{color:#FFFFFF; background-color:#213E7F;}
 
 
 /* Content Area */
