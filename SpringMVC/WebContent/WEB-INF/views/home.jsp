@@ -12,7 +12,7 @@
     	<div align="center">
 	        <h1>Contact List</h1>
 	        <h3><a href="newContact">New Contact</a></h3>
-	        <table border="1">
+	        <table  border="1">
 	        	<th>No</th>
 	        	<th>Name</th>
 	        	<th>Email</th>

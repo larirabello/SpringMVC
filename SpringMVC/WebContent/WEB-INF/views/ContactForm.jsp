@@ -5,8 +5,9 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>New/Edit Contact</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>New/Edit Contact</title>
+	<link rel="Stylesheet" href="${pageContext.request.contextPath}/layout/styles/contactStyle.css">
 </head>
 <body>
 	<div align="center">
@@ -31,10 +32,11 @@
 				<td><form:input path="telephone" /></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center"><input type="submit" value="Save"></td>
+				<td colspan="2" align="center"><input type="submit" value="Save" class="btn"></td>
 			</tr>
 		</table>
 		</form:form>
+		<a class="blueLink" id="backLink" href="#">Voltar</a>
 	</div>
 </body>
 </html>
