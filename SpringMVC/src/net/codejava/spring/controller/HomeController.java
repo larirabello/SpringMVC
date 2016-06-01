@@ -21,13 +21,14 @@ import org.springframework.web.servlet.ModelAndView;
  * @author www.codejava.net
  *
  */
-@Controller
+@Controller // a annotation sai de uma biblioteca, vem da lib spring-context ...(uma das frameworks da Spring). O Spring vê o controller e coloca no container.
 public class HomeController {
 
 	@Autowired
-	private ContactDAO contactDAO;
+	private ContactDAO contactDAO; 
+	// dentro do container HomeController tem contactDAO. Assim, o contactDAO precisa estar uma annotation ou configurado no web.xml - ou não existe. Implementei annotation no contactDAOImpl
 	
-	@RequestMapping(value="/")
+	@RequestMapping(value="/") // cada @requestMapping é como um Servlet inteiro. Mapeio minhas URLs por método.
 	public ModelAndView mainPage(ModelAndView model) throws IOException{
 		model.setViewName("index");
 		

@@ -50,4 +50,8 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
 	public ContactDAO getContactDAO() {
 		return new ContactDAOImpl(getDataSource());
 	}
+	
+
+	
+	// essas infos poderiam estar no web.xml. Geralmente a annotation está diretamente nas classes.
 }

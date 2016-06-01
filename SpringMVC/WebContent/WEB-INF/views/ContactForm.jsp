@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div align="center">
-		<h1>New/Edit Contact</h1>
+		<h1 id="editContact">New Contact</h1>
 		<form:form action="saveContact" method="post" modelAttribute="contact">
 		<table>
 			<form:hidden path="id"/>
@@ -36,7 +36,7 @@
 			</tr>
 		</table>
 		</form:form>
-		<a class="blueLink" id="backLink" href="#">Voltar</a>
+		<a class="blueLink" id="backLink" href="contacts">Voltar</a>
 	</div>
 </body>
 </html>

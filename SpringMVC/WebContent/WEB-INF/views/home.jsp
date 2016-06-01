@@ -7,11 +7,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Contact Manager Home</title>
+		<link rel="Stylesheet" href="${pageContext.request.contextPath}/layout/styles/contactStyle.css">
     </head>
     <body>
     	<div align="center">
 	        <h1>Contact List</h1>
-	        <h3><a href="newContact">New Contact</a></h3>
+	        <h3><a  href="newContact">New Contact</a></h3>
+	        <span id="myButton">texto</span>
 	        <table  border="1">
 	        	<th>No</th>
 	        	<th>Name</th>
@@ -38,4 +40,11 @@
 			</table>
     	</div>
     </body>
+    <script>
+    document.getElementById("myButton").onclick=function() {
+    	alert("funfou");
+    }
+          
+    </script>
+
 </html>

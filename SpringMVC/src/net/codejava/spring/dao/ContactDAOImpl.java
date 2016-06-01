@@ -12,15 +12,17 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * An implementation of the ContactDAO interface.
  * @author www.codejava.net
  *
  */
+
 public class ContactDAOImpl implements ContactDAO {
 
-	private JdbcTemplate jdbcTemplate;
+	private JdbcTemplate jdbcTemplate; //jdbc é uma classe do spring com metodos para criar conexao, executar query e retornar num BD.
 	
 	public ContactDAOImpl(DataSource dataSource) {
 		jdbcTemplate = new JdbcTemplate(dataSource);
@@ -29,13 +31,14 @@ public class ContactDAOImpl implements ContactDAO {
 	@Override
 	public void saveOrUpdate(Contact contact) {
 		if (contact.getId() > 0) {
-			// update
+			// query update
 			String sql = "UPDATE contact SET name=?, email=?, address=?, "
 						+ "telephone=? WHERE contact_id=?";
 			jdbcTemplate.update(sql, contact.getName(), contact.getEmail(),
 					contact.getAddress(), contact.getTelephone(), contact.getId());
+			// vai atualizar algo no banco. Vai executar a tabela contact. Cada ? é um parametro. 
 		} else {
-			// insert
+			// insert. Abaixo nao passa id pq já é gerado automaticamente.
 			String sql = "INSERT INTO contact (name, email, address, telephone)"
 						+ " VALUES (?, ?, ?, ?)";
 			jdbcTemplate.update(sql, contact.getName(), contact.getEmail(),
@@ -54,7 +57,7 @@ public class ContactDAOImpl implements ContactDAO {
 	public List<Contact> list() {
 		String sql = "SELECT * FROM contact";
 		List<Contact> listContact = jdbcTemplate.query(sql, new RowMapper<Contact>() {
-
+			// dentro do objeto RowMapper tenho que sobrescrever como vou receber o contact.
 			@Override
 			public Contact mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Contact aContact = new Contact();
