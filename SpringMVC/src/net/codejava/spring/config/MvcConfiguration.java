@@ -14,6 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import net.codejava.spring.dao.ContactDAO;
 import net.codejava.spring.dao.ContactDAOImpl;
+import net.codejava.spring.dao.LoginDAO;
 
 @Configuration
 @ComponentScan(basePackages="net.codejava.spring")

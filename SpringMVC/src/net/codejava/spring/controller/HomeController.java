@@ -28,7 +28,7 @@ public class HomeController {
 	private ContactDAO contactDAO; 
 	// dentro do container HomeController tem contactDAO. Assim, o contactDAO precisa estar uma annotation ou configurado no web.xml - ou não existe. Implementei annotation no contactDAOImpl
 	
-	@RequestMapping(value="/") // cada @requestMapping é como um Servlet inteiro. Mapeio minhas URLs por método.
+	@RequestMapping(value="/home") // cada @requestMapping é como um Servlet inteiro. Mapeio minhas URLs por método.
 	public ModelAndView mainPage(ModelAndView model) throws IOException{
 		model.setViewName("index");
 		
@@ -44,7 +44,7 @@ public class HomeController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/newContact", method = RequestMethod.GET)
+	@RequestMapping(value ="/newContact", method = RequestMethod.GET)
 	public ModelAndView newContact(ModelAndView model) {
 		Contact newContact = new Contact();
 		model.addObject("contact", newContact);
