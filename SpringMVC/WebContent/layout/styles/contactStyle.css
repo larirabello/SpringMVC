@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+body {
+	background-color: #ffffff;
+	color: #001946;
+	font-family: 'Open Sans Condensed','Hind', sans-serif;
+	font-size: 1.1em;
+}
+
+h1, h2, h3 {
+	font-family: 'Hind', sans-serif;
+}
+
+/* fonte: proxima */
+input {
+		border: 1px solid rgba(190, 189, 195, 1);
+		height: 40px;
+		margin: 10px 0;
+		padding: 0 10px;
+		width: 400px;
+}
+
+input:focus {
+    border: 1px solid #0097D9;
+}
+input:hover {
+		border: 1px solid #0097D9;
+		transition-duration: 1s;
+}
+
+input[placeholder="Name"] {
+    font-size:1em;
+}
+input[placeholder="Email"] {
+    font-size:1em;
+}
+input[placeholder="Address"] {
+    font-size:1em;
+}
+input[placeholder="Telephone"] {
+    font-size:1em;
+}
+
+table#contactTable {
+	border: 1px solid rgba(190, 189, 195, 1);
+	width: 550px;
+}
+
+td {
+	font-size: 1em;
+	padding: 0 10px;
+	text-transform: uppercase;
+}
+
+th {
+	color: #0097D9;
+	font-size: 1.1em;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* estiliza o botao Save */
+
+.btn {
+	background-color: #fff;
+	border: 1px solid rgba(190, 189, 195, 1);
+	color: #001946;
+	height: 40px;
+	letter-spacing: 2px;
+	padding: 10px;
+	text-transform: uppercase;
+	width: 100px;
+}
+
+.btn:hover {
+	border: 1px solid #0097D9;
+	color: #0097D9;
+	transition: all 1s linear;
+}
+
+.blueLink {
+	border-bottom: 3px solid #0097D9;
+	color: #000;
+	padding: 0px;
+	text-decoration: none;
+	width: 50px;
+}
+
+.blueLink:hover {
+	background-color: #0097D9;
+	color: #fff;
+	padding: 0px;
+}
+
+#backLink {
+	float: left;
+	margin-left: 35%;
+}
+
+
+/* modal */
+
+    .remodal {
+      width: 400px;
+      height: 250px;
+      background-color: #fff;
+    }
+
+    .btn:hover {
+      border: 1px solid #0097D9;
+      color: #0097D9;
+      transition: all 1s linear;
+      background-color: rgba(252, 252, 253, 0.5);
+    }
+
+    .remodal .btn {
+      width: 100px;
+      height: 20px;
+    }
+
+    .btn-ok:hover {
+      border: 1px solid #90BC98;
+      color: #90BC98;
+    }
+
+    .btn-no:hover {
+      border: 1px solid #9C4D65;
+      color: #9C4D65;
+    }

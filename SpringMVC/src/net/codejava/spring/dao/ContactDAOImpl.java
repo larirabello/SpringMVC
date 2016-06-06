@@ -22,7 +22,7 @@ import org.springframework.stereotype.Repository;
 
 public class ContactDAOImpl implements ContactDAO {
 
-	private JdbcTemplate jdbcTemplate; //jdbc é uma classe do spring com metodos para criar conexao, executar query e retornar num BD.
+	private JdbcTemplate jdbcTemplate; //jdbc é uma classe(ou interface?) do spring com metodos para criar conexao, executar query e retornar num BD.
 	
 	public ContactDAOImpl(DataSource dataSource) {
 		jdbcTemplate = new JdbcTemplate(dataSource);
@@ -46,6 +46,7 @@ public class ContactDAOImpl implements ContactDAO {
 		}
 		
 	}
+	
 
 	@Override
 	public void delete(int contactId) {

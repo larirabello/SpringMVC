@@ -38,13 +38,22 @@
 	        	</tr>
 				</c:forEach>	        	
 			</table>
-    	</div>
+			
+			
+			<!-- MODAL -->
+			
+			<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+			  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+			  <div>
+			    <h2 id="modal1Title">Remodal</h2>
+			    <p id="modal1Desc">
+			      Are you sure?
+			    </p>
+			  </div>
+			  <br>
+			  <button data-remodal-action="cancel" class="remodal-cancel"><a href="editContact?id=${contact.id}">Edit</a></button>
+			  <button data-remodal-action="confirm" class="remodal-confirm"><a href="deleteContact?id=${contact.id}">Delete</a></button>
+			</div>
     </body>
-    <script>
-    document.getElementById("myButton").onclick=function() {
-    	alert("funfou");
-    }
-          
-    </script>
 
 </html>

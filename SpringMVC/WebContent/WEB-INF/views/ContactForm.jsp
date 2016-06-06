@@ -7,6 +7,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>New/Edit Contact</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 	<link rel="Stylesheet" href="${pageContext.request.contextPath}/layout/styles/contactStyle.css">
 </head>
 <body>
