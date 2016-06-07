@@ -27,7 +27,7 @@ public class ContactDAOImpl implements ContactDAO {
 	public ContactDAOImpl(DataSource dataSource) {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-
+	
 	@Override
 	public void saveOrUpdate(Contact contact) {
 		if (contact.getId() > 0) {
