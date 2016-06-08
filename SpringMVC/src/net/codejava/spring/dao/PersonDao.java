@@ -12,6 +12,8 @@ public abstract interface PersonDao {
 	
 	public abstract List<Person> selectAll();
 	
+	public abstract List<Person> selectPersonByName(String name);
+	
 	public abstract void deletePerson(String name, String surname);
 	
 	public abstract void deleteAll();

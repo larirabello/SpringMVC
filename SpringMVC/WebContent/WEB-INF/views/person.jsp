@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>  
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
@@ -9,35 +12,29 @@
     </head>
     <body>
     	<div align="center">
-	        <h1>Contact List</h1>
-	        <h3><a  href="newContact">New Contact</a></h3>
-	        <span id="myButton">texto</span>
+	        <h1>Person List</h1>
+	        <h3><a  href="newPerson">New Person</a></h3>
+	        <form:form action="searchPerson" method="get" modelAttribute="person">
+			    <form:label path="name">First name</form:label>
+			    <form:input path="name" />
+			    <br />
+			
+    			<input type="submit" value="Submit" />
+			</form:form>
+
 	        <table  border="1">
-	        	<th>No</th>
-	        	<th>Name</th>
-	        	<th>Email</th>
-	        	<th>Address</th>
-	        	<th>Telephone</th>
-	        	<th>Action</th>
-	        	
-				<c:forEach var="contact" items="${listContact}" varStatus="status">
 	        	<tr>
-	        		<td>${status.index + 1}</td>
-					<td>${contact.name}</td>
-					<td>${contact.email}</td>
-					<td>${contact.address}</td>
-					<td>${contact.telephone}</td>
-					<td>
-						<a href="editContact?id=${contact.id}">Edit</a>
-						&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="deleteContact?id=${contact.id}">Delete</a>
-					</td>
-							
+		        	<th>Name</th>
+		        	<th>Surname</th>
+	        	</tr>
+				<c:forEach var="person" items="${listPerson}">
+	        	<tr>
+					<td>${person.name}</td>
+					<td>${person.surname}</td>							
 	        	</tr>
 				</c:forEach>	        	
 			</table>
-			
+		</div>
     </body>
 
 </html>
->

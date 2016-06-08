@@ -51,6 +51,13 @@ public class PersonDaoImpl implements PersonDao  {
 		this.dataSource = dataSource;
 	}
 	
+	public List<Person> selectPersonByName(String name) {
+		return jdbcTemplate.query("SELECT * FROM PERSON_RECORD WHERE NAME LIKE %?%;",
+				new Object[] {name},
+				new PersonRowMapper());
+	}
+	
+	
 	//EXERCICIO
 	public List<Person> selectOrderedByName() {
 		JdbcTemplate selectOrderedByName = new JdbcTemplate(dataSource);
