@@ -7,7 +7,7 @@ body {
 	font-size: 1.1em;
 }
 
-h1, h2, h3 {
+h1, h2 {
 	font-family: 'Hind', sans-serif;
 }
 
@@ -39,6 +39,15 @@ input[placeholder="Address"] {
 }
 input[placeholder="Telephone"] {
     font-size:1em;
+}
+
+input[placeholder="Search by name (ajax)"] {
+    font-size:.7em;
+    text-transform: uppercase;
+}
+
+table {
+	border-style:
 }
 
 table#contactTable {

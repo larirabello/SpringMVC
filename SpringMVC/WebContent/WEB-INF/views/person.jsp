@@ -8,8 +8,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Contact Manager Home</title>
-		<link rel="Stylesheet" href="${pageContext.request.contextPath}/layout/styles/contactStyle.css"/>
-		<script type="text/javascript" src="${pageContext.request.contextPath}/layout/scripts/jquery.min.js"></script>
+		<link rel="Stylesheet" href="${pageContext.request.contextPath}/layout/styles/contactStyle.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/layout/scripts/jquery.min.js"></script>  	
     </head>
     <body>
     	<div align="center">
@@ -18,10 +19,10 @@
 	        
 	        <div>
 			       <a href="/SpringMVC/person">Search a name:</a>
-			       <label><input type="text" id="person_search" placeholder="search by name" value=""></label>
+			       <label><input type="text" id="person_search" placeholder="Search by name (ajax)" value=""></label>
 			</div>
 	        <form:form action="searchPerson" method="get" modelAttribute="person">
-			    <form:label path="name">Search a name:</form:label>
+			    <form:label path="name" >Search a name:</form:label>
 			    <form:input path="name" />
 			    <br />
 			

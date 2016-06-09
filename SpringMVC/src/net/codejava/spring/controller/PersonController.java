@@ -5,15 +5,11 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import net.codejava.spring.dao.ContactDAO;
 import net.codejava.spring.dao.PersonDao;
-import net.codejava.spring.dao.PersonDaoImpl;
-import net.codejava.spring.model.Contact;
 import net.codejava.spring.model.Person;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
