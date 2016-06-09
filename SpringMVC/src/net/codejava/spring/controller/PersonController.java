@@ -73,7 +73,13 @@ public class PersonController {
 		return model;
 	}
 	
-	
+	 @RequestMapping(value="/persons_list", method = RequestMethod.GET)
+     public ModelAndView listUserAjax(ModelAndView model, HttpServletRequest request) throws IOException{
+           List<Person> listPerson = personDao.selectPersonByName(request.getParameter("term"));
+           model.addObject("listPerson", listPerson);
+           model.setViewName("list_ajax");
+           return model;
+     }
 
 	
 }

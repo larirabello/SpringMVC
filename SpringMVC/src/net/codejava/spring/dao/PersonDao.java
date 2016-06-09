@@ -17,5 +17,6 @@ public abstract interface PersonDao {
 	public abstract void deletePerson(String name, String surname);
 	
 	public abstract void deleteAll();
+	
 
 }

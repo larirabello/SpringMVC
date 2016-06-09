@@ -8,21 +8,27 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Contact Manager Home</title>
-		<link rel="Stylesheet" href="${pageContext.request.contextPath}/layout/styles/contactStyle.css">
+		<link rel="Stylesheet" href="${pageContext.request.contextPath}/layout/styles/contactStyle.css"/>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/layout/scripts/jquery.min.js"></script>
     </head>
     <body>
     	<div align="center">
 	        <h1>Person List</h1>
 	        <h3><a  href="newPerson">New Person</a></h3>
+	        
+	        <div>
+			       <a href="/SpringMVC/person">Search a name:</a>
+			       <label><input type="text" id="person_search" placeholder="search by name" value=""></label>
+			</div>
 	        <form:form action="searchPerson" method="get" modelAttribute="person">
-			    <form:label path="name">First name</form:label>
+			    <form:label path="name">Search a name:</form:label>
 			    <form:input path="name" />
 			    <br />
 			
     			<input type="submit" value="Submit" />
 			</form:form>
 
-	        <table  border="1">
+	        <table id="persons" border="1">
 	        	<tr>
 		        	<th>Name</th>
 		        	<th>Surname</th>
@@ -35,6 +41,25 @@
 				</c:forEach>	        	
 			</table>
 		</div>
+		<div>
+		       <a href="/SpringMVC/person">Search a name (ajax)</a>
+		       <label><input type="text" id="person_search" placeholder="search by name" value=""></label>
+		</div>
+		<script type="text/javascript">
+			$("#person_search").on("keyup", function(){
+			       var term = $("#person_search").val();
+			       $.ajax({
+			             url: "/SpringMVC/persons_list",
+			             method: "GET",
+			             data: {
+			                    term: term
+			             },
+			             success: function(r){
+			                    $("table#persons").html(r);
+			             }
+			       })
+			});
+		</script>
     </body>
 
 </html>
